@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:clickable="true"
+    tools:context=".LabFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Spinner
+        android:id="@+id/spinner_lab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="297dp">
+
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/spinner_lab_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+    </Spinner>
+</RelativeLayout>

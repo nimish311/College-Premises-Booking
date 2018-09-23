@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.nimishgupta.mycollege.MainActivity;
-import com.example.nimishgupta.mycollege.R;
-
 public class SplashScreen extends AppCompatActivity {
 
     @Override

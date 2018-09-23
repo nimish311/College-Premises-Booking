@@ -21,19 +21,18 @@ public class LabFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_lab, container, false);
-
-        Spinner spinner = (Spinner) v.findViewById(R.id.spinner_lab);
+        //Lab Numbers
+        Spinner spinner = (Spinner) v.findViewById(R.id.spinner_toChooseLabNo);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(),
-                                                    android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.lab_size));
+                                                    android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.lab_number));
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        View v1 = inflater.inflate(R.layout.fragment_lab, container, false);
-
-        Spinner spinner1 = (Spinner) v1.findViewById(R.id.spinner_lab);
+        //Time slot of LAB
+        Spinner spinner1 = (Spinner) v.findViewById(R.id.spinner_toChooseTimeSlotofLab);
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this.getActivity(),
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.lab_size));
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.timeSlotOfLab));
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter1);

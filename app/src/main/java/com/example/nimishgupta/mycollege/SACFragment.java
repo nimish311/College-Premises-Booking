@@ -1,6 +1,8 @@
 package com.example.nimishgupta.mycollege;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -30,7 +32,25 @@ public class SACFragment extends Fragment {
         return view;
     }
 
-
+//    public void onBackPressed(){
+//        final AlertDialog.Builder builder = new AlertDialog.Builder(SACFragment.this);
+//        builder.setMessage("Are you sure you want to exit?");
+//        builder.setCancelable(true);
+//        builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.cancel();
+//            }
+//        });
+//        builder.setPositiveButton("Close!", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                getActivity().finish();
+//            }
+//        });
+//        AlertDialog alertDialog = builder.create();
+//        alertDialog.show();
+//    }
 
 
 }

@@ -1,7 +1,9 @@
 package com.example.nimishgupta.mycollege;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,15 +23,38 @@ public class LectureFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_lecture, container, false);
-
-        String[] values =
-                {"Time at Residence", "Under 6 months", "6-12 months", "1-2 years", "2-4 years", "4-8 years", "8-15 years", "Over 15 years",};
-        Spinner spinner = (Spinner) v.findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
-        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        //First spinner for Size OF LT
+        Spinner spinner = (Spinner) v.findViewById(R.id.spinner_toChooseLTsize);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(),
+                                                        android.R.layout.simple_list_item_1,getResources().getStringArray( R.array.lectureHallSize));
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
+        //Spinner for Time Slot
+        Spinner spinner1 = (Spinner)v.findViewById(R.id.spinner_toChooseTimeSlot);
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this.getActivity(),
+                                                        android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.timeSlotofLT));
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(adapter1);
         return v;
     }
+
+//    public void onBackPressed() {
+//        new AlertDialog.Builder()
+//                .setIcon(android.R.drawable.ic_dialog_alert)
+//                .setTitle("Closing Activity")
+//                .setMessage("Are you sure you want to close this activity?")
+//                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+//                {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        getActivity().finish();
+//                    }
+//
+//                })
+//                .setNegativeButton("No", null)
+//                .show();
+//    }
+
 
 }

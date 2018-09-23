@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:padding="10dip"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     >
 
     <!-- Text Label -->
     <TextView
+        android:id="@+id/lecture_sizeID"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
-        android:text="Category:"
-        android:layout_marginBottom="5dp"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="45dp"
+        android:text="@string/sizeOfLt" />
 
     <!-- Spinner Element -->
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner_toChooseLTsize"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:prompt="@string/lecture_spinner"
-        />
-</LinearLayout>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="89dp"
+         />
+
+    <TextView
+        android:id="@+id/lecture_timeSlot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="206dp"
+        android:text="@string/time_slot" />
+
+    <Spinner
+        android:id="@+id/spinner_toChooseTimeSlot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="250dp">
+
+    </Spinner>
+</RelativeLayout>

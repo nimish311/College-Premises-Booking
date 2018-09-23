@@ -4,25 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:clickable="true"
+    android:padding="10dip"
     tools:context=".LabFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/lab_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:text="@string/labNumber" />
+
     <Spinner
-        android:id="@+id/spinner_lab"
-        android:layout_width="wrap_content"
+        android:id="@+id/spinner_toChooseLabNo"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="297dp">
+        android:layout_marginTop="138dp">
 
     </Spinner>
 
+    <TextView
+        android:id="@+id/lab_timeSlot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="206dp"
+        android:text="@string/labTiming" />
+
     <Spinner
-        android:id="@+id/spinner_lab_day"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        
+        android:id="@+id/spinner_toChooseTimeSlotofLab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="262dp">
+
     </Spinner>
 </RelativeLayout>
